@@ -422,6 +422,10 @@ h1 span{
         font-size: 15px;
         text-wrap: nowrap;
     }
+    .number > label{
+    text-wrap: nowrap;
+    }
+
     .about_section-info > label:last-of-type{
         margin-top: 50px;
         font-size: 30px;
