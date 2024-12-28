@@ -1,0 +1,433 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:  #e3d6a5  ;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Section-Primary*/
+.section{
+    display: flex;
+    height: 100dvh;
+}
+.box_section{
+    max-width: 50dvw;
+    min-height: 100dvh;
+}
+
+
+
+/*Left-Section Primary*/
+.section_left{
+    background-color: #f5f5dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-info{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-info > label{
+    font-size: 45px;
+    letter-spacing: 4px;
+    text-wrap: nowrap;
+}
+h1{
+    font-size: 80px;
+    letter-spacing: 4px;
+}
+.section-info > h2{
+    background-color: #ce4229;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.section-info > p{
+    text-align: justify;
+    font-size: 20px;
+}
+.section-info > input{
+    background-color: #ce4229;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-weight: bold;
+    padding:  8px 30px;
+}
+h1 span{
+    color: #ce4229;
+}
+.section-info > input:hover{
+    opacity: 0.7;
+    scale: 1.2;
+    transition: scale 0.1s linear;
+}
+
+
+
+/*Queries Left-Section Primary*/
+@media screen and (max-width:525px){
+    .section{
+        flex-direction: column;
+    }
+    .section_left{
+        min-width: fit-content;
+    }
+    .section_profile{
+        display: none;
+    }
+}
+/*Font Queries*/
+@media screen and (max-width: 945px){
+    h1{
+        font-size: 40px;
+    }
+    .section-info > p{
+        text-align: justify;
+        font-size: 1rem;
+    }
+}
+/*Left-Section Primary ENDS*/
+
+
+
+
+
+
+/*---------------------------------------------------------Right-Section Primary Section-----------------------------------------------------*/
+.section_profile{
+    width: 50%;
+    background-image:url('Foto.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.section_profile-nav{
+    max-width: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-20%, -50%);
+    border-radius: 20px;
+    padding: 50px 10px;
+    background-color: #ce4229bd;
+    color: black;
+    text-align: center;
+    position: fixed;
+}
+.section_profile-nav a {
+    color: black;
+    text-decoration: none;
+}
+.button:first-child{
+    width: fit-content;
+    color: white;
+}
+.button:hover{
+    opacity: 0.7;
+    scale: 1.4;
+    transition: scale 0.1s linear;
+}
+
+
+
+/*Profile Queries Section Ends*/
+@media screen and (max-width:525px){
+    .section_profile{
+        display: none;
+    }
+    
+    .section_profile-nav{
+        background-color: #ce4229; 
+        flex-direction: row;
+        top: 0;
+        transform: translate(0, 0);
+        min-width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+/*---------------------------------------------------------Right-Section Primary End Section-----------------------------------------------------*/
+
+
+/*----------------------------------------------------------About Section Padre-------------------------------------------------------------------*/
+.about_section{
+    display: flex;
+    flex-direction: row;
+    min-height: 100dvh;
+}
+.aside_img{
+    max-width: 100%;
+}
+
+/*About Section hijos*/
+.about_section-aside{
+    display: flex;
+    flex-direction: column;
+    max-width: 15%;
+    height: 100vh;
+    background-color: #ce4229;
+    position: sticky;
+    top: 0;
+}
+
+
+.aside-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    list-style: none;
+    
+}
+.aside-nav-item a{
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+.aside-nav-item a:hover{
+    opacity: 0.7;
+    scale: 1.2;
+    transition: scale 0.1s linear;
+}
+.aside-nav-item:nth-child(2) a {
+    color: white;
+}
+
+/*About Queries Section Ends*/
+@media screen and (max-width:525px){
+    .about_section{
+        justify-content: center;
+        align-items: center;
+    }
+    .about_section-aside{
+        display: none;
+    }
+}
+
+
+
+
+/*-------------------------------------------------------First-Child Padre----------------------------------------------*/
+
+.about_section-info-first{
+}
+.about_section-info{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+/*First-Child*/
+.about_section-title{
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 100px;
+    border: 1px dotted black;
+    width: 80%;
+    text-align: center;
+}
+/*Second-Child*/
+.about_section-text{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+.about_section-text > label{
+    font-size: 30px;
+}
+.about_section-text > p{
+    font-size: 20px;
+}
+.about_section-text > label >span{
+    font-weight: bold;
+}
+
+
+
+
+/*3er-Child*/
+.about_section-box{
+    width: 75%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+}
+.fact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.about_section-box-facts{
+    flex-grow: 6;
+    color: white;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    padding: 20px;
+}
+.about_section-box-facts .fact:first-of-type{
+    /* Estilos para el primer div */
+    border-right: 1px dotted white;
+    border-bottom: 1px dotted white; 
+}
+.about_section-box-facts .fact:nth-of-type(3){
+    /* Estilos para el tercer div */
+    border-right: 1px dotted white;
+}
+.about_section-box-facts .fact:nth-of-type(2){
+    border-bottom: 1px dotted white;
+}
+
+.fact label{
+    font-size: 2vw;
+    
+}
+.fact label:first-child{
+    font-size: 6vw ;
+    font-weight: bold;
+    color: #ce4229;
+    border: none;
+}
+.about_section-box-question{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+/*About-Info Queries Section Ends*/
+@media screen and (max-width: 945px){
+    .about_section-title{
+        font-size: 40px;
+    }
+    .about_section-text > label{
+        font-size: 25px;
+    }
+    .about_section-text > p{
+        text-align: justify;
+        font-size: 1rem;
+    }
+    .aside-nav{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:525px){
+    
+    .fact{
+        padding: 20pxs;
+    }
+    .about_section-box-question > label{
+        font-size: 15px;
+    }
+}
+
+
+/*--------------------------------First-Child  Ends Padre----------------------------------------------*/
+
+/*--------------------------------Second-Child Padre----------------------------------------------*/
+.contact{
+    padding: 20px;
+    gap: 30px;
+}
+.comunication{
+    margin-top: 50px;
+    max-width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    gap: 0;
+}
+.about_section-text {
+    max-width: 80%;
+
+}
+.info{
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 0 10px;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: bold;
+    text-wrap: nowrap;
+    font-size: 1em;
+    gap: 5px;}
+
+.info > label:first-of-type{
+    font-size: 6vw;
+}
+.about_section-info > label:last-of-type{
+    margin-top: 50px;
+    font-size: 4vw;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+
+@media screen and (max-width:525px){
+    
+    .info > label:first-of-type{
+        font-size: 8vw;
+
+    }
+    .number{
+        font-size: 15px;
+        text-wrap: nowrap;
+    }
+    .about_section-info > label:last-of-type{
+        margin-top: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        text-wrap: nowrap;
+    }
+}
+/*--------------------------------Second-Child  Ends Padre----------------------------------------------*/
+
